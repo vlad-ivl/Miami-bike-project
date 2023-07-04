@@ -1,0 +1,86 @@
+
+
+.menu {
+    background: $bgcGray;
+    &__content {
+      height: 100vh;
+      box-sizing: border-box;
+      padding: 29px 0px 88px 0px;
+      height: 100vh;
+  
+      @include onDesktop {
+        padding: 36px 0 203px 0;
+      }
+    }
+
+    &__list {
+      padding: 0;
+      list-style: none;
+      margin-bottom: 44px;
+      margin-top: 44px;
+
+    }
+
+    &__item {
+      margin-bottom: 22px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__link {
+      display: inline-block;
+      padding-bottom: 8px;
+      border-bottom: 1px solid transparent;
+
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 22px;
+      letter-spacing: 2px;
+      text-transform: uppercase;  
+      color: $menuTextColor;
+      text-decoration: none;
+      
+
+      transition: border-color 0.3s;
+
+      &:hover {
+        border-color: $menuTextColor;
+      }
+      
+    }
+
+    &__call {
+      
+      color: $menuTextColor;
+      text-decoration: none;
+      display: block;
+
+      &--phone {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 27px;
+        margin-bottom: 16px;
+      }
+
+      &--action {
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 16px;
+
+        &::after {
+          content: '';
+          display: block;
+          display: block;
+          width: 136px;
+          height: 2px;
+          background-color: black;
+          margin-top: 8px;
+        }
+      }
+    }
+
+  }

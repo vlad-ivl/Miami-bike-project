@@ -1,0 +1,10 @@
+.footer {
+    background-size: cover;
+    background-position: center;
+    background-image: url(../images/photos/under-footer.jpg) ;
+    height: 200px;
+
+    @include onDesktop {
+        height: 555px;
+    }
+}

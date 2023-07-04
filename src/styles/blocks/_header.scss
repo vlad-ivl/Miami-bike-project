@@ -1,0 +1,49 @@
+.header {
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-image: url(../images/photos/mikkel-bech-mini.png);
+    height: 100vh;
+  
+    @include onTablet{
+      background-image: url(../images/photos/mikkel-bech.jpg);
+      background-position: center;
+
+    }
+    @include onDesktop {
+      background-image: url(../images/photos/mikkel-bech.jpg);
+      background-position: center;
+    }
+  
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-sizing: border-box;
+      padding: 29px 0px 88px 0px;
+      height: 100vh;
+      
+  
+      @include onDesktop {
+        padding: 36px 0 203px 0;
+      }
+    }
+  
+  
+    &__title {
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 80%;
+      color: #FFFFFF;
+      letter-spacing: -1.5px;;
+      text-align: center;
+  
+      @include onDesktop {
+          font-size: 80px;
+          letter-spacing: -1.5px;
+          line-height: 100%;
+      }
+    }
+  
+  
+  }

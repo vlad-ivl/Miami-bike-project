@@ -1,0 +1,200 @@
+main {
+  padding-bottom: 120px;
+
+  @include onDesktop {
+    padding-bottom: 160px;
+  }
+}
+
+.page {
+  font-family: "Poppins", sans-serif;
+
+  &__body {
+    margin: 0;
+    padding: 0;
+    background-color: $menuTextColor;
+  }
+
+  &__menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    transform: translate(100%);
+    transition: transform 0.3s;
+
+    &:target {
+      transform: translate(0%);
+    }
+  }
+
+  &__section {
+    box-sizing: border-box;
+    margin: 0;
+    padding-top: 92px;
+    height: max-content;
+    background-position: center;
+    background-size: cover;
+
+    &:first-child {
+      padding-top: 60px;
+
+      @include onDesktop {
+        padding-top: 120px;
+      }
+    }
+
+    @include onDesktop {
+      padding-top: 120px;
+    }
+
+    &-title {
+      margin: 0;
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 32px;
+      text-align: center;
+      letter-spacing: -1.5px;
+      text-transform: capitalize;
+      color: #ffffff;
+
+      @include onTablet {
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 100%;
+      }
+
+      @include onDesktop {
+        font-weight: 500;
+        font-size: 64px;
+        line-height: 100%;
+      }
+
+      &-1 {
+        padding-bottom: 32px;
+        text-align: left;
+
+        @include onTablet {
+          vertical-align: top;
+          font-weight: 500;
+          font-size: 44px;
+          line-height: 100%;
+        }
+
+        @include onDesktop {
+          vertical-align: top;
+          font-weight: 500;
+          font-size: 62px;
+          line-height: 100%;
+        }
+      }
+      &-2 {
+        padding-bottom: 48px;
+      }
+    }
+
+    &-text-move {
+      margin: 0;
+      width: 280px;
+
+      display: inline-block;
+      font-weight: 500;
+      font-size: 23px;
+      line-height: 140%;
+      color: #ffffff;
+
+      @include onTablet {
+        width: 288px;
+        font-weight: 500;
+        font-size: 23px;
+        line-height: 140%;
+      }
+
+      @include onDesktop {
+        width: 498px;
+        font-weight: 500;
+        font-size: 23px;
+        line-height: 140%;
+      }
+    }
+  }
+}
+
+.compare-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include onDesktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  &__text {
+    max-width: 100%;
+
+    @include onTablet {
+      width: 392px;
+    }
+  }
+
+  &__size {
+    width: 290px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  color: #ffffff;
+
+  &__img {
+    text-align: center;
+    padding-bottom: 32px;
+  }
+
+  &__bike-img {
+    width: 280px;
+
+    @include onTablet {
+      width: 392px;
+    }
+
+    @include onDesktop {
+      width: 324px;
+    }
+  }
+
+  &__big-text-style {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 140%;
+  }
+
+  &__small-text-style {
+    color: #ffffff;
+    display: inline-block;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    padding-bottom: 16px;
+  }
+
+  &__name {
+    padding-bottom: 8px;
+  }
+
+  &__price {
+    padding-bottom: 40px;
+
+    @include onDesktop {
+      padding-bottom: 0;
+    }
+
+    &-last {
+      padding-bottom: 0;
+    }
+  }
+}

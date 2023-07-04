@@ -1,0 +1,29 @@
+.icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  
+    @include onDesktop {
+      width: 30px;
+      height: 30px;
+    }
+  
+    &--menu {
+      background-image: url(../images/Icon-Burger-menu.png);
+  
+      &:hover {
+        background-image: url(../images/Icon-Burger-menu-hover.png);
+      }
+    }
+  
+    &--phone {
+      background-image: url(../images/Icon-Phone-call.png)
+    }
+  
+    &--cross {
+      background-image: url(../images/Icon-Close.svg);
+    }
+  }

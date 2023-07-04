@@ -1,0 +1,116 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+
+    // @include onTablet {
+    //     grid-template-columns: repeat(6, 1fr);
+    //     column-gap: 22px;
+    // }
+
+    @include onDesktop {
+        grid-template-columns: repeat(12, 1fr);
+        column-gap: 24px;
+    }
+
+    // &--tablet {
+    //     display: block;
+    //     @include onTablet {
+    //         display: grid;
+    //     }
+    // }
+
+    &--desktop {
+        display: block;
+        @include onDesktop {
+            display: grid;
+        }
+    }
+    
+
+    &__item {
+
+        // @include onTablet {
+        //     @for $start from 1 through 6 {
+        //         @for $end from $start through 6 {
+        //             &__tablet--#{$start}-#{$end} {
+        //                 grid-column: #{$start} / #{$end + 1} ;
+        //             }
+        //         }
+        //     }
+        // }  
+      
+        @include onDesktop {
+            @for $start from 1 through 12 {
+                @for $end from $start through 12 {
+                    &--#{$start}-#{$end} {
+                        grid-column: #{$start} / #{$end + 1} ;
+                    }
+                }
+            }
+        }  
+    }
+}
+
+.details {
+
+    &__photo-container {
+        position: relative;
+        width: 100%;
+        max-height: 321px;
+        box-sizing:border-box;
+        overflow: hidden;
+
+        &::after {
+            content: '';
+            display: block;
+            padding-bottom: 100%;
+
+        }
+        // @include onTablet {
+        //     height: 320px;
+        //     padding-bottom: 0;
+        //     }
+
+        @include onDesktop {
+        height: 320px;
+        padding-bottom: 0;
+        }
+    }
+
+    &__photo {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        margin-bottom: 16px;
+
+        object-fit: cover;
+        object-position: center;
+        
+        @include onDesktop {
+            height: 320px;
+            margin-bottom: 16px;
+        }
+
+    }
+
+    &__item-big-text {
+        margin-bottom: 6px;
+        margin-top: 16px;
+
+        @include onDesktop {
+            margin-bottom: 8px;
+        }
+    }
+
+    &__item-small-text {
+        margin-bottom: 40px;
+
+        @include onDesktop {
+            margin-bottom: 50px;
+        }
+    }
+}
+
+
+
